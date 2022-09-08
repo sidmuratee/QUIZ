@@ -3,6 +3,7 @@ let images = [
     {img: "./image-2.png", description: "2"},
     {img: "./image-3.png", description: "3"},
     {img: "./image-4.png", description: "4"},
+    
 ]
 
 
