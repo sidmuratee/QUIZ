@@ -1,0 +1,159 @@
+
+/* austins css v*/
+header {
+    display: flex;
+    justify-content: space-between;
+   
+    padding: 1%;
+    background-color: #f97777;
+    color: aqua;
+  }
+
+
+h2{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aqua;
+}
+
+body{
+    background-color: rgb(33, 8, 57);
+}
+
+p{
+    justify-content: center;
+    color: aqua;
+    display: block;
+    text-align: center;
+}
+fieldset{
+    display: hidden;
+}
+button{
+    background-color: aqua;
+    color: palevioletred;
+   
+    justify-content: center;
+ align-items: center;
+text-align: center;
+}
+
+.answerButtons{
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+}
+#start{ 
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+a{
+    background-color: aqua;
+    color: palevioletred;
+   
+    justify-content: center;
+ align-items: center;
+text-align: center;
+
+}
+
+/* austins css ^*/
+
+/* /* .answerButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+        */
+/* } */
+/* button {
+background-color: aquamarine;
+color: brown;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+#A {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+#B {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+#C {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+#D {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 100px;
+}
+
+.timer {
+    display: flex;
+    background-color: blueviolet;
+}
+
+.start {
+    display: flex;
+}
+.answer {
+    text-decoration-color: blue;
+    max-width: 70rem;
+}
+
+header {
+    background-color: aqua;
+} */ 
