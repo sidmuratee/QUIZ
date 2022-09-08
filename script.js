@@ -1,10 +1,14 @@
-let images = [
-    {img: "./image-1.png", description: "content"},
-    {img: "./image-2.png", description: "2"},
-    {img: "./image-3.png", description: "3"},
-    {img: "./image-4.png", description: "4"},
+let questions = [
+    {question: "What is 1 +1?", answers: ["A. 0", "B. 1", "C. 2", "D. 3"]
+correctAnswer: "C. 2"},
+    {question: "What is 2 +1?", answers: ["A. 4", "B. 1", "C. 2", "D. 3"]
+correctAnswer: "D. 3"},
+    {question: "What is 3 +1?", answers: ["A. 1", "B. 4", "C. 2", "D. 3"]
+correctAnswer: "B. 4"},
+    {question: "What is 4 +1?", answers: ["A. 3", "B. 4", "C. 2", "D. 5"]
+correctAnswer: "D. 5"},
     
-]
+];
 
 
 let imageEl = document.querySelector("img");
