@@ -11,20 +11,28 @@ correctAnswer: "D. 5"},
 ];
 
 
-let imageEl = document.querySelector("img");
-let imageDescEl = document.querySelector("h1");
-let timerEl = document.querySelector("h4");
+let answerButton = document.querySelector(".answerButton")
+let answers = document.querySelector(h2)
+let questionText = document.querySelector(#Answers)
+let A = document.querySelector("#A")
+let B = document.querySelector("#B")
+let C = document.querySelector("#C")
+let D = document.querySelector("#D")
+
+// let imageEl = document.querySelector("img");
+// let imageDescEl = document.querySelector("h1");
+// let timerEl = document.querySelector("h4");
 
 
-let timer = 60;
-let idleTimer = 10;
+// let timer = 60;
+// let idleTimer = 10;
 
-let intervalId;
-let idleIntervalId;
+// let intervalId;
+// let idleIntervalId;
 
-let container = document.querySelector(".container");
+// let container = document.querySelector(".container");
 
-let currentImageIndex = 0;
+// let currentImageIndex = 0;
 
 renderImage();
 startOverallTimer();
