@@ -1,94 +1,103 @@
 let questions = [
-    {question: "What is 1 +1?", answers: ["A. 0", "B. 1", "C. 2", "D. 3"],
-correctAnswer: "C. 2"},
-    {question: "What is 2 +1?", answers: ["A. 4", "B. 1", "C. 2", "D. 3"],
-correctAnswer: "D. 3"},
-    {question: "What is 3 +1?", answers: ["A. 1", "B. 4", "C. 2", "D. 3"],
-correctAnswer: "B. 4"},
-    {question: "What is 4 +1?", answers: ["A. 3", "B. 4", "C. 2", "D. 5"],
-correctAnswer: "D. 5"}
-    
+    {
+        question: "What is 1 +1?", answers: ["A. 0", "B. 1", "C. 2", "D. 3"],
+        correctAnswer: "C. 2"
+    },
+    {
+        question: "What is 2 +1?", answers: ["A. 4", "B. 1", "C. 2", "D. 3"],
+        correctAnswer: "D. 3"
+    },
+    {
+        question: "What is 3 +1?", answers: ["A. 1", "B. 4", "C. 2", "D. 3"],
+        correctAnswer: "B. 4"
+    },
+    {
+        question: "What is 4 +1?", answers: ["A. 3", "B. 4", "C. 2", "D. 5"],
+        correctAnswer: "D. 5"
+    }
+
 ];
 
-
+let startText = document.querySelector("#startText")
 let answerButtons = document.querySelector(".answerButtons");
-let answers = document.querySelector("h2");
-let questionText = document.querySelector("#answer");
+// let answers = document.querySelector("h2");
+let questionText = document.querySelector("#question");
 let A = document.querySelector("#A");
 let B = document.querySelector("#B");
 let C = document.querySelector("#C");
 let D = document.querySelector("#D");
-let currentQuestionIndex = 0;
 // let answer = document.querySelector("answer");
 
-answerButtons.addEventListener("click", function(){
-    currentQuestionIndex++;
+answerButtons.addEventListener("click", function () {
     renderQuestion();
-
 });
 
 
-function renderQuestion(){
-    let question = questions[currentQuestionIndex];
-
-    questionText.innerText = questions.question;
-    A.innerText = question.answers[0];
-    B.innerText = question.answers[1];
-    C.innerText = question.answers[2];
-    D.innerText = question.answers[3];
+function renderQuestion() {
+    for (let i = 0; i < questions.length; i++) {
+        let question = questions[i].question;
+        questionText.innerHTML = question
+        let answer = questions[i].answers
+        A.innerHTML = answer[0]
+        B.innerHTML = answer[1]
+        C.innerHTML = answer[2]
+        D.innerHTML = answer[3]
+    }
 };
 
 function checkCorrect(el) { //checks if answer is correct
     let correctAnswer = questions[currentQuestionIndex].correctAnswer;
     console.log(correctAnswer);
     console.log(el.textContent);
-    if(el.textContent === correctAnswer){
+    if (el.textContent === correctAnswer) {
         window.alert("correct + 1 ")
-    }else{
+    } else {
         el.textContent !== correctAnswer
         window.alert("incorrect - 1 ")
     }
-   if(el.textContent !== correctAnswer){
-    secondsLeft -=5;
-   }
-  
+    if (el.textContent !== correctAnswer) {
+        secondsLeft -= 5;
+    }
+
 }
 start.addEventListener("click", startQuiz)
 let secondsLeft = 50;
 
 
 function startQuiz() { //starts timer when start is clicked 
-    style.display="block";
-    
-    
-    let timerInterval = setInterval(function() {
-        secondsLeft --;
-        timeEl.textContent = secondsLeft 
-        
-        if (currentQuestionIndex === 4 ) //when question  3 is answered timer stops 
-        clearInterval(timerInterval)
-        
-        if(secondsLeft === 0) {
+    startText.style.display = "none";
+
+    renderQuestion();
+
+
+    let timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft
+
+        if (currentQuestionIndex === 4) //when question  3 is answered timer stops 
+            clearInterval(timerInterval)
+
+        if (secondsLeft === 0) {
             // timer stops when seconds left hits 0 
             clearInterval(timerInterval)
-            
-            
+
+
         }
-        
+
     }, 1000);
 }
 
-function startIdleTimer(){
+function startIdleTimer() {
 
-    idleIntervalId = setInterval(function(){
+    idleIntervalId = setInterval(function () {
         idleTimer--;
         console.log(idleTimer)
-        if(idleTimer === 0){
+        if (idleTimer === 0) {
             nextImage();
             clearInterval(idleIntervalId);
             renderImage();
         }
-    },1000)
+    }, 1000)
 
 
 }
