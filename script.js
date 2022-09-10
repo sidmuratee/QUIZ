@@ -19,6 +19,7 @@ let B = document.querySelector("#B");
 let C = document.querySelector("#C");
 let D = document.querySelector("#D");
 let currentQuestionIndex = 0;
+// let answer = document.querySelector("answer");
 
 answerButtons.addEventListener("click", function(){
     currentQuestionIndex++;
@@ -42,10 +43,10 @@ function checkCorrect(el) { //checks if answer is correct
     console.log(correctAnswer);
     console.log(el.textContent);
     if(el.textContent === correctAnswer){
-        window.alert("correct, + 1 ")
+        window.alert("correct + 1 ")
     }else{
         el.textContent !== correctAnswer
-        window.alert("incorrect, + 1 ")
+        window.alert("incorrect - 1 ")
     }
    if(el.textContent !== correctAnswer){
     secondsLeft -=5;
@@ -57,26 +58,40 @@ let secondsLeft = 50;
 
 
 function startQuiz() { //starts timer when start is clicked 
-    appear.style.display="block";
-   
+    style.display="block";
+    
     
     let timerInterval = setInterval(function() {
         secondsLeft --;
         timeEl.textContent = secondsLeft 
-
+        
         if (currentQuestionIndex === 4 ) //when question  3 is answered timer stops 
         clearInterval(timerInterval)
         
         if(secondsLeft === 0) {
             // timer stops when seconds left hits 0 
             clearInterval(timerInterval)
-
+            
+            
+        }
         
-    }
-    
-}, 1000);
+    }, 1000);
 }
 
+function startIdleTimer(){
+
+    idleIntervalId = setInterval(function(){
+        idleTimer--;
+        console.log(idleTimer)
+        if(idleTimer === 0){
+            nextImage();
+            clearInterval(idleIntervalId);
+            renderImage();
+        }
+    },1000)
+
+
+}
 // let imageEl = document.querySelector("img");
 // let imageDescEl = document.querySelector("h1");
 // let timerEl = document.querySelector("h4");
@@ -133,20 +148,6 @@ function startQuiz() { //starts timer when start is clicked
 
 // }
 
-// function startIdleTimer(){
-
-//     idleIntervalId = setInterval(function(){
-//         idleTimer--;
-//         console.log(idleTimer)
-//         if(idleTimer === 0){
-//             nextImage();
-//             clearInterval(idleIntervalId);
-//             renderImage();
-//         }
-//     },1000)
-
-
-// }
 
 
 
